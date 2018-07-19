@@ -1,0 +1,18 @@
+server {
+	listen 80;
+	listen [::]:80;
+	
+	server_name	abc.test;
+    root	/home/alireza/http/abc;
+
+    ##
+    # logging Settings
+    ##
+	access_log /var/log/nginx/abc_access.log;
+	error_log /var/log/nginx/abc_error.log;
+
+    ##
+    # include config
+    ##
+	include /etc/nginx/sites-available/config;
+}
